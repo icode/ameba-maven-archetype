@@ -1,14 +1,10 @@
 #!/bin/sh
 
-P_DIR=$(cd `pwd`/..; pwd)
+P_DIR=$(cd `dirname $0`/..; pwd)
 
-LIB=$P_DIR/lib
+LIB=$P_DIR/lib/*
 
-for i in $LIB/*.jar;
-do CLASSPATH="$i":"$CLASSPATH";
-done
-
-CLASSPATH="$P_DIR":"$CLASSPATH"
+CP="$P_DIR":"$LIB"
 
 TEMP_DIR=$P_DIR/temp
 
@@ -22,4 +18,8 @@ else
   export JAVA="$JAVA_HOME/bin/java"
 fi
 
-$JAVA -cp $CLASSPATH ameba.Ameba & echo $! > $TEMP_DIR/pid
+./shutdown.sh
+
+cd "$P_DIR"
+echo `pwd`
+$JAVA -cp $CP ameba.Ameba  & echo $! > $TEMP_DIR/pid
