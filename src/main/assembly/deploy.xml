@@ -17,13 +17,6 @@
             </includes>
         </fileSet>
         <fileSet>
-            <directory>src/main/resources/conf</directory>
-            <outputDirectory>/conf</outputDirectory>
-            <includes>
-                <include>*/**</include>
-            </includes>
-        </fileSet>
-        <fileSet>
             <directory>src/main/scripts</directory>
             <outputDirectory>/bin</outputDirectory>
             <fileMode>0777</fileMode>

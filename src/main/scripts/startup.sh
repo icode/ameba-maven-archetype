@@ -1,6 +1,6 @@
 #!/bin/sh
-
-P_DIR=$(cd `dirname $0`/..; pwd)
+C_DIR=`dirname $0`
+P_DIR=$(cd $C_DIR/..; pwd)
 
 LIB=$P_DIR/lib/*
 
@@ -20,6 +20,19 @@ fi
 
 ./shutdown.sh
 
+CAT=`which cat`
+GREP=`which egrep`
+TR=`which tr`
+
+VM_OPTIONS=""
+vm_opts_file="$C_DIR/ameba.vmoptions"
+
+if [ -r "$vm_opts_file" ]; then
+  VM_OPTIONS=`"$CAT" "$vm_opts_file" | "$GREP" -v "^#.*" | "$TR" '\n' ' '`
+fi
+
 cd "$P_DIR"
-echo `pwd`
-$JAVA -cp $CP ameba.Ameba  & echo $! > $TEMP_DIR/pid
+
+$JAVA -cp $CP \
+ $VM_OPTIONS \
+ ameba.Ameba  & echo $! > $TEMP_DIR/pid
