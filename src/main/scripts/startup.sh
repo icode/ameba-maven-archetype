@@ -34,5 +34,6 @@ fi
 cd "$P_DIR"
 
 $JAVA -cp $CP \
- $VM_OPTIONS \
- ameba.Ameba  & echo $! > $TEMP_DIR/pid
+  $VM_OPTIONS \
+  ameba.Ameba \
+  "$@" & echo $! > $TEMP_DIR/pid
