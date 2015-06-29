@@ -2,11 +2,163 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${"view.index.title".message}</title>
-    <link href="/assets/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/codemirror/codemirror.css">
+    <link rel="stylesheet" href="/assets/css/pure/pure-min.css">
+    <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/assets/css/pure/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/assets/css/pure/grids-responsive-min.css">
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/assets/css/layouts/marketing-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="/assets/css/layouts/marketing.css">
+    <!--<![endif]-->
+    <script src="/assets/js/codemirror/lib/codemirror.js"></script>
+    <script src="/assets/js/mithril.min.js"></script>
     <script src="/assets/js/index.js"></script>
 </head>
 <body>
-ameba framework
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href="//amebastack.org">Ameba Framework</a>
+
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="//github.com/icode/ameba/" class="pure-menu-link">Github</a></li>
+            <li class="pure-menu-item"><a href="//github.com/icode/ameba/issues" class="pure-menu-link">Issues</a></li>
+            <li class="pure-menu-item"><a href="//amebastack.org/docs" class="pure-menu-link">${"view.index.menu.docs".message}</a>
+            </li>
+            <li class="pure-menu-item"><a href="//ameba.club"
+                                          class="pure-menu-link">${"view.index.menu.club".message}</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="splash-container">
+    <div class="splash">
+        <h1 class="splash-head">${"view.index.splash.title".message}</h1>
+
+        <p class="splash-subhead">
+            ${"view.index.tutorial.desc".message}
+        </p>
+
+        <p>
+            <a href="#" class="pure-button pure-button-primary">${"view.index.tutorial".message}</a>
+        </p>
+
+        <p>
+            <i class="fa fa-angle-down page-down"></i>
+        </p>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <h2 class="content-head is-center">${"view.index.feature.title".message}</h2>
+
+        <div class="pure-g">
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+
+                <h3 class="content-subhead">
+                    <i class="fa fa-rocket"></i>
+                    ${"view.index.feature.getStarted".message}
+                </h3>
+
+                <p>
+                    ${"view.index.feature.getStarted.content".message}
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-crosshairs"></i>
+                    ${"view.index.feature.mode".message}
+                </h3>
+
+                <p>
+                    ${"view.index.feature.mode.content".message}
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-th-large"></i>
+                    ${"view.index.feature.modular".message}
+                </h3>
+
+                <p>
+                    ${"view.index.feature.modular.content".message}
+                </p>
+            </div>
+            <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
+                <h3 class="content-subhead">
+                    <i class="fa fa-cubes"></i>
+                    ${"view.index.feature.fullStack".message}
+                </h3>
+
+                <p>
+                    ${"view.index.feature.fullStack.content".message}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ribbon l-box-lrg pure-g">
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+            <img class="pure-img-responsive" alt="File Icons" width="300" src="/assets/img/file-icons.png">
+        </div>
+        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+
+            <h2 class="content-head content-head-ribbon">${"view.index.easyRun".message}</h2>
+
+            <p>
+                ${"view.index.easyRun.content".message}
+            </p>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2 class="content-head is-center">${"view.index.more".message}</h2>
+
+        <div class="pure-g">
+            <div class="l-box-lrg pure-u-1 pure-u-md-1-2">
+                <h4>${"view.index.more.hotSpot".message}</h4>
+
+                <p>
+                    ${"view.index.more.hotSpot.content".message}
+                </p>
+
+                <h4>${"view.index.more.speedBoot".message}</h4>
+
+                <p>
+                    ${"view.index.more.speedBoot.content".message}
+                </p>
+            </div>
+
+            <div class="l-box-lrg pure-u-1 pure-u-md-1-2">
+                <h4>${"view.index.more.rest".message}</h4>
+
+                <p>
+                    ${"view.index.more.rest.content".message}
+                </p>
+
+                <h4>${"view.index.more.devOps".message}</h4>
+
+                <p>
+                    ${"view.index.more.devOps.content".message}
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer l-box is-center">
+        © 2015 Ameba Stack Organization. This project is licensed the terms of the MIT License.
+    </div>
+
+</div>
 </body>
 </html>
