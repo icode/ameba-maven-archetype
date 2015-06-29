@@ -7,7 +7,7 @@ app/
 │   ├── main/
 │   │   ├── assembly/
 │   │   │   └── deploy.xml                                  打包发布模式包配置
-│   │   ├── java/
+│   │   ├── java/                                           Java 源码文件目录
 │   │   ├── resources/
 │   │   │   ├── assets/                                     公开静态资源存放目录
 │   │   │   │   ├── css/
