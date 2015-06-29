@@ -19,9 +19,6 @@
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="/assets/css/layouts/marketing.css">
     <!--<![endif]-->
-    <script src="/assets/js/codemirror/lib/codemirror.js"></script>
-    <script src="/assets/js/mithril.min.js"></script>
-    <script src="/assets/js/index.js"></script>
 </head>
 <body>
 <div class="header">
@@ -136,6 +133,12 @@
                 <p>
                     ${"view.index.more.speedBoot.content".message}
                 </p>
+
+                <h4>${"view.index.more.thanks".message}</h4>
+
+                <p>
+                    $!{"view.index.more.thanks.content".message}
+                </p>
             </div>
 
             <div class="l-box-lrg pure-u-1 pure-u-md-1-2">
@@ -150,15 +153,54 @@
                 <p>
                     ${"view.index.more.devOps.content".message}
                 </p>
+
+                <h4>${"view.index.more.link".message}</h4>
+                <ul class="pure-menu pure-menu-horizontal more-link">
+
+                    <li class="pure-menu-item">
+                        <a href="//github.com/Ameba" class="pure-menu-link"><i
+                                class="fa fa-fw fa-github"></i></a>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a href="https://github.com/Ameba/AmebaStack/issues" class="pure-menu-link"><i
+                                class="fa fa-fw fa-bug"></i></a>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a href="https://plus.google.com/116577209082774853202/posts" class="pure-menu-link"><i
+                                class="fa fa-fw fa-google-plus"></i></a>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a href="//stackoverflow.com/questions/tagged/amebastack" class="pure-menu-link"><i
+                                class="fa fa-fw fa-stack-overflow"></i></a>
+                    </li>
+
+                    <li class="pure-menu-item">
+                        <a href="mailto:intelligentcodemail@gmail.com" class="pure-menu-link"><i
+                                class="fa fa-fw fa-envelope-o"></i></a>
+                    </li>
+
+                </ul>
             </div>
         </div>
 
     </div>
 
     <div class="footer l-box is-center">
-        © 2015 Ameba Stack Organization. This project is licensed the terms of the MIT License.
+        <div class="pure-u-lg-1-1">
+            © 2015 Ameba Stack Organization.
+        </div>
+        <div class="pure-u-lg-1-1">
+            Ameba Stack is Open Source and available under the MIT License.
+        </div>
     </div>
 
 </div>
+
+<script src="/assets/js/codemirror/lib/codemirror.js"></script>
+<script src="/assets/js/mithril.min.js"></script>
+<script src="/assets/js/index.js"></script>
 </body>
 </html>

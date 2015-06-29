@@ -24,6 +24,10 @@ label {
     color: #34495e;
 }
 
+a {
+    color: #7f8c8d;
+}
+
 .pure-img-responsive {
     max-width: 100%;
     height: auto;
@@ -62,6 +66,11 @@ label {
     font-size: 100%;
     width: 100%;
     margin-bottom: 1em;
+}
+
+.more-link {
+    font-size: 25px;
+    padding-left: 0;
 }
 
 /*
@@ -145,7 +154,7 @@ a.pure-button-primary {
 .splash-container i.page-down {
     font-size: 50px;
     color: #fff;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.7);
     line-height: 33px;
     position: absolute;
     margin-left: -10px;
