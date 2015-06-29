@@ -42,7 +42,7 @@ app/
 │               ├── application_trace.conf                  通过 APP ID 调用的配置文件，打开框架详细日志
 │               ├── ehcache.xml                             EhCache 配置文件
 │               └── security.ini                            Shiro 配置文件
-├── LICENSE                                                 协议文件
+├── LICENSE                                                 开源协议文件
 ├── pom.xml                                                 Maven 配置文件
 └── README.md
 ```
