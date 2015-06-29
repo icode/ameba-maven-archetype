@@ -41,5 +41,12 @@
                 <exclude>*/**</exclude>
             </excludes>
         </fileSet>
+        <fileSet>
+            <directory>src/main/assembly</directory>
+            <outputDirectory>/conf</outputDirectory>
+            <excludes>
+                <exclude>*/**</exclude>
+            </excludes>
+        </fileSet>
     </fileSets>
 </assembly>
