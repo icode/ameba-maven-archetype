@@ -1,7 +1,7 @@
 # Maven 创建 module 模板
 
 模板结构
-
+```
 app/
 ├── src/
 │   ├── main/
@@ -44,3 +44,4 @@ app/
 ├── LICENSE
 ├── pom.xml
 └── README.md
+```
