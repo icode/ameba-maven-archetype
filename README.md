@@ -51,6 +51,9 @@ app/
 │       └── ameba/                                          框架生成的资源文件
 │           └── conf/
 │               └── evolutions/                             框架生成的 DDL
+│                   └── default/                            `default` 数据源脚本存放目录（db.default.url=...）
+│                       ├── create.sql                      创建数据表的 DDL
+│                       └── drop.sql                        删除数据表的 DDL
 ├── LICENSE                                                 开源协议文件
 ├── pom.xml                                                 Maven 配置文件
 └── README.md
