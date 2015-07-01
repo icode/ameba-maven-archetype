@@ -134,6 +134,16 @@ a.pure-button-primary {
     color: #AECFE5;
 }
 
+.link {
+    font-size: 30px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.link:hover {
+    opacity: .7;
+}
+
 /*
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
