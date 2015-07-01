@@ -40,8 +40,8 @@ app/
 │               │   └── log_off_fw.groovy                   通过 APP ID 调用的配置文件，关闭框架日志
 │               ├── application.conf                        应用主配置文件
 │               ├── application_trace.conf                  通过 APP ID 调用的配置文件，打开框架详细日志
-│               ├── ehcache.xml                             EhCache 配置文件
-│               └── security.ini                            Shiro 配置文件
+│               ├── ehcache.xml                             EhCache 配置文件，使用 EhCahe 缓存模块时才需要
+│               └── security.ini                            Shiro 配置文件，使用 Shiro 模块时才需要
 ├── target/
 │   ├── classes/                                            编译的 class
 │   ├── generated-classes/
