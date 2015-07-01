@@ -212,7 +212,7 @@
     </profiles>
 
     <properties>
-        <ameba.version>0.1.7.Alpha1</ameba.version>
+        <ameba.version>0.1.7.Alpha2</ameba.version>
         <ameba.maven>0.1.7.Alpha1</ameba.maven>
         <ameba.session.version>0.1.7.Alpha1</ameba.session.version>
         <ameba.dev.version>0.1.7.Alpha1</ameba.dev.version>
