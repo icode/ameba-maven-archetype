@@ -216,7 +216,7 @@
         <ameba.maven>0.1.7.Alpha2</ameba.maven>
         <ameba.session.version>0.1.7.Alpha1</ameba.session.version>
         <ameba.dev.version>0.1.7.Alpha2</ameba.dev.version>
-        <ameba.shrio.version>0.1.7.Alpha1</ameba.shrio.version>
+        <ameba.shrio.version>0.1.7-SNAPSHOT</ameba.shrio.version>
         <ameba.container.version>0.1.7.Alpha1</ameba.container.version>
         <ameba.ehcache.version>0.1.7.Alpha1</ameba.ehcache.version>
         <ameba.memcached.version>0.1.7.Alpha1</ameba.memcached.version>
