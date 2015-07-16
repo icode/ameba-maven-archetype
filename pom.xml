@@ -135,6 +135,7 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
@@ -166,6 +167,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.7</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
@@ -178,6 +180,7 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
+                        <version>2.2.1</version>
                         <configuration>
                             <descriptors>
                                 <descriptor>src/main/assembly/deploy.xml</descriptor>
@@ -196,7 +199,7 @@
                     <plugin>
                         <groupId>org.amebastack.maven</groupId>
                         <artifactId>ameba-maven</artifactId>
-                        <version>${ameba.maven}</version>
+                        <version>${ameba.maven.version}</version>
                         <executions>
                             <execution>
                                 <phase>process-classes</phase>
@@ -213,13 +216,13 @@
 
     <properties>
         <ameba.version>0.1.7-SNAPSHOT</ameba.version>
-        <ameba.maven>0.1.7.Alpha2</ameba.maven>
-        <ameba.session.version>0.1.7.Alpha1</ameba.session.version>
-        <ameba.dev.version>0.1.7.Alpha2</ameba.dev.version>
+        <ameba.dev.version>0.1.7-SNAPSHOT</ameba.dev.version>
+        <ameba.maven.version>0.1.7-SNAPSHOT</ameba.maven.version>
         <ameba.shrio.version>0.1.7-SNAPSHOT</ameba.shrio.version>
+        <ameba.session.version>0.1.7.Alpha1</ameba.session.version>
         <ameba.container.version>0.1.7.Alpha1</ameba.container.version>
-        <ameba.ehcache.version>0.1.7.Alpha1</ameba.ehcache.version>
-        <ameba.memcached.version>0.1.7.Alpha1</ameba.memcached.version>
+        <ameba.ehcache.version>0.1.7.Alpha2</ameba.ehcache.version>
+        <ameba.memcached.version>0.1.7.Alpha2</ameba.memcached.version>
         <ameba.email.version>0.1.7.Alpha1</ameba.email.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
