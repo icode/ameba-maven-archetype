@@ -149,34 +149,11 @@
             </properties>
         </profile>
 
-        <!--deploy-->
+        <!--enhance class-->
         <profile>
-            <id>deploy</id>
+            <id>enhance</id>
             <build>
                 <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-assembly-plugin</artifactId>
-                        <version>2.2.1</version>
-                        <configuration>
-                            <filters>
-                                <filter>src/main/filters/application.properties</filter>
-                                <filter>src/main/filters/application-${app.mode}.properties</filter>
-                            </filters>
-                            <descriptors>
-                                <descriptor>src/main/assembly/${deploy.mode}.xml</descriptor>
-                            </descriptors>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>make-assembly</id>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>single</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
                     <plugin>
                         <groupId>org.amebastack.maven</groupId>
                         <artifactId>ameba-maven-plugin</artifactId>
@@ -194,20 +171,44 @@
             </build>
         </profile>
 
-        <!--start-->
+        <!--package standalone start-->
         <profile>
             <id>standalone</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-assembly-plugin</artifactId>
+                        <version>2.2.1</version>
+                        <configuration>
+                            <filters>
+                                <filter>src/main/filters/application.properties</filter>
+                                <filter>src/main/filters/application-${app.mode}.properties</filter>
+                            </filters>
+                            <descriptors>
+                                <descriptor>src/main/assembly/standalone.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>make-assembly</id>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>single</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
             <dependencies>
                 <dependency>
                     <groupId>org.amebastack.container</groupId>
                     <artifactId>ameba-container-grizzly</artifactId>
                 </dependency>
             </dependencies>
-            <properties>
-                <deploy.mode>standalone</deploy.mode>
-            </properties>
         </profile>
-        <!--end-->
+        <!--package standalone end-->
     </profiles>
 
     <properties>
