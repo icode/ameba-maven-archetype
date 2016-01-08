@@ -1,5 +1,5 @@
 <assembly>
-    <id>deploy</id>
+    <id>standalone</id>
     <formats>
         <format>zip</format>
     </formats>
@@ -22,6 +22,7 @@
             <directory>src/main/conf</directory>
             <outputDirectory>/conf</outputDirectory>
             <directoryMode>0755</directoryMode>
+            <filtered>true</filtered>
             <includes>
                 <include>*/**</include>
             </includes>

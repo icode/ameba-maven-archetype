@@ -1,3 +1,4 @@
+package conf.log
 /***
  * disable Ameba framework log
  *

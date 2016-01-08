@@ -14,26 +14,20 @@
             <artifactId>ameba</artifactId>
             <version>${ameba.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.amebastack.module</groupId>
-            <artifactId>ameba-session</artifactId>
-            <version>${ameba.session.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.amebastack.module</groupId>
-            <artifactId>ameba-cache-ehcache</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.amebastack.container</groupId>
-            <artifactId>ameba-container-grizzly</artifactId>
-            <version>${ameba.container.version}</version>
-        </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.amebastack.container</groupId>
+                <artifactId>ameba-container-grizzly</artifactId>
+                <version>${ameba.container.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.amebastack.module</groupId>
+                <artifactId>ameba-session</artifactId>
+                <version>${ameba.session.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.amebastack.module</groupId>
                 <artifactId>ameba-cache-ehcache</artifactId>
@@ -44,13 +38,11 @@
                 <artifactId>ameba-cache-memcached</artifactId>
                 <version>${ameba.memcached.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.amebastack.module</groupId>
                 <artifactId>ameba-email</artifactId>
                 <version>${ameba.email.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>org.amebastack.security</groupId>
                 <artifactId>ameba-shiro</artifactId>
@@ -121,69 +113,58 @@
                     <artifactId>ameba-dev</artifactId>
                     <version>${ameba.dev.version}</version>
                 </dependency>
-
                 <dependency>
-                    <groupId>com.h2database</groupId>
-                    <artifactId>h2</artifactId>
-                    <version>1.4.187</version>
+                    <groupId>org.amebastack.container</groupId>
+                    <artifactId>ameba-container-grizzly</artifactId>
                 </dependency>
             </dependencies>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/conf</directory>
+                        <targetPath>${build.outputDirectory}/conf</targetPath>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
+
+                <filters>
+                    <filter>src/main/filters/application.properties</filter>
+                    <filter>src/main/filters/application-${app.mode}.properties</filter>
+                </filters>
+            </build>
+            <properties>
+                <app.mode>dev</app.mode>
+            </properties>
         </profile>
+        <profile>
+            <id>test</id>
+            <properties>
+                <app.mode>test</app.mode>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <app.mode>prod</app.mode>
+            </properties>
+        </profile>
+
+
         <profile>
             <id>deploy</id>
             <build>
                 <plugins>
                     <plugin>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <configuration>
-                                    <gpgArguments>
-                                        <argument>--no-tty</argument>
-                                    </gpgArguments>
-                                </configuration>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>2.2.1</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.7</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-assembly-plugin</artifactId>
                         <version>2.2.1</version>
                         <configuration>
+                            <filters>
+                                <filter>src/main/filters/application.properties</filter>
+                                <filter>src/main/filters/application-${app.mode}.properties</filter>
+                            </filters>
                             <descriptors>
-                                <descriptor>src/main/assembly/deploy.xml</descriptor>
+                                <descriptor>src/main/assembly/${deploy.mode}.xml</descriptor>
                             </descriptors>
                         </configuration>
                         <executions>
@@ -212,6 +193,21 @@
                 </plugins>
             </build>
         </profile>
+
+        <!--start-->
+        <profile>
+            <id>standalone</id>
+            <dependencies>
+                <dependency>
+                    <groupId>org.amebastack.container</groupId>
+                    <artifactId>ameba-container-grizzly</artifactId>
+                </dependency>
+            </dependencies>
+            <properties>
+                <deploy.mode>standalone</deploy.mode>
+            </properties>
+        </profile>
+        <!--end-->
     </profiles>
 
     <properties>
