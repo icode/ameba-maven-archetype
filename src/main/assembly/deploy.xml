@@ -21,6 +21,7 @@
         <fileSet>
             <directory>src/main/conf</directory>
             <outputDirectory>/conf</outputDirectory>
+            <directoryMode>0755</directoryMode>
             <includes>
                 <include>*/**</include>
             </includes>
