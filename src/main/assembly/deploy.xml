@@ -13,7 +13,16 @@
         <fileSet>
             <outputDirectory>/</outputDirectory>
             <includes>
+                <include>README</include>
                 <include>README.*</include>
+                <include>*.README.*</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>src/main/conf</directory>
+            <outputDirectory>/conf</outputDirectory>
+            <includes>
+                <include>*/**</include>
             </includes>
         </fileSet>
         <fileSet>
@@ -37,13 +46,6 @@
             <directory>src/main/assembly</directory>
             <outputDirectory>/temp</outputDirectory>
             <directoryMode>0755</directoryMode>
-            <excludes>
-                <exclude>*/**</exclude>
-            </excludes>
-        </fileSet>
-        <fileSet>
-            <directory>src/main/assembly</directory>
-            <outputDirectory>/conf</outputDirectory>
             <excludes>
                 <exclude>*/**</exclude>
             </excludes>
