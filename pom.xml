@@ -103,7 +103,7 @@
 
     <profiles>
         <profile>
-            <id>dev</id>
+            <id>app.dev.mode</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
@@ -137,19 +137,19 @@
             </properties>
         </profile>
         <profile>
-            <id>test</id>
+            <id>app.test.mode</id>
             <properties>
                 <app.mode>test</app.mode>
             </properties>
         </profile>
         <profile>
-            <id>prod</id>
+            <id>app.prod.mode</id>
             <properties>
                 <app.mode>prod</app.mode>
             </properties>
         </profile>
 
-
+        <!--deploy-->
         <profile>
             <id>deploy</id>
             <build>
