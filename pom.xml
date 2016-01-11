@@ -215,9 +215,9 @@
         <ameba.version>0.1.8-SNAPSHOT</ameba.version>
         <ameba.dev.version>0.1.8-SNAPSHOT</ameba.dev.version>
         <ameba.maven.version>0.1.8-SNAPSHOT</ameba.maven.version>
-        <ameba.shrio.version>0.1.7-SNAPSHOT</ameba.shrio.version>
+        <ameba.container.version>0.1.8-SNAPSHOT</ameba.container.version>
+        <ameba.shrio.version>0.1.8-SNAPSHOT</ameba.shrio.version>
         <ameba.session.version>0.1.7-SNAPSHOT</ameba.session.version>
-        <ameba.container.version>0.1.7-SNAPSHOT</ameba.container.version>
         <ameba.ehcache.version>0.1.7.Alpha2</ameba.ehcache.version>
         <ameba.memcached.version>0.1.7.Alpha2</ameba.memcached.version>
         <ameba.email.version>0.1.7.Alpha1</ameba.email.version>
