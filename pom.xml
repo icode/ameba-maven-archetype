@@ -217,10 +217,10 @@
         <ameba.maven.version>0.1.8-SNAPSHOT</ameba.maven.version>
         <ameba.container.version>0.1.8-SNAPSHOT</ameba.container.version>
         <ameba.shrio.version>0.1.8-SNAPSHOT</ameba.shrio.version>
-        <ameba.session.version>0.1.7-SNAPSHOT</ameba.session.version>
-        <ameba.ehcache.version>0.1.7.Alpha2</ameba.ehcache.version>
-        <ameba.memcached.version>0.1.7.Alpha2</ameba.memcached.version>
-        <ameba.email.version>0.1.7.Alpha1</ameba.email.version>
+        <ameba.session.version>0.1.8-SNAPSHOT</ameba.session.version>
+        <ameba.ehcache.version>0.1.8-SNAPSHOT</ameba.ehcache.version>
+        <ameba.memcached.version>0.1.8-SNAPSHOT</ameba.memcached.version>
+        <ameba.email.version>0.1.8-SNAPSHOT</ameba.email.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
