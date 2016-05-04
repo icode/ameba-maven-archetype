@@ -6,13 +6,19 @@
 
     <groupId>org.amebastack.maven</groupId>
     <artifactId>ameba-maven-archetype</artifactId>
-    <version>0.1.8-SNAPSHOT</version>
+    <version>0.1.9-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
             <groupId>org.amebastack</groupId>
             <artifactId>ameba</artifactId>
             <version>${ameba.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.amebastack.template</groupId>
+            <artifactId>ameba-mvc-httl</artifactId>
         </dependency>
     </dependencies>
 
@@ -47,6 +53,11 @@
                 <groupId>org.amebastack.security</groupId>
                 <artifactId>ameba-shiro</artifactId>
                 <version>${ameba.shrio.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.amebastack.template</groupId>
+                <artifactId>ameba-mvc-httl</artifactId>
+                <version>${ameba.mvc.httl.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -212,15 +223,16 @@
     </profiles>
 
     <properties>
-        <ameba.version>0.1.8-SNAPSHOT</ameba.version>
-        <ameba.dev.version>0.1.8-SNAPSHOT</ameba.dev.version>
-        <ameba.maven.version>0.1.8-SNAPSHOT</ameba.maven.version>
-        <ameba.container.version>0.1.8-SNAPSHOT</ameba.container.version>
+        <ameba.version>0.1.9-SNAPSHOT</ameba.version>
+        <ameba.dev.version>0.1.9-SNAPSHOT</ameba.dev.version>
+        <ameba.maven.version>0.1.9-SNAPSHOT</ameba.maven.version>
+        <ameba.container.version>0.1.9-SNAPSHOT</ameba.container.version>
         <ameba.shrio.version>0.1.8-SNAPSHOT</ameba.shrio.version>
-        <ameba.session.version>0.1.8-SNAPSHOT</ameba.session.version>
+        <ameba.session.version>0.1.9-SNAPSHOT</ameba.session.version>
         <ameba.ehcache.version>0.1.8-SNAPSHOT</ameba.ehcache.version>
         <ameba.memcached.version>0.1.8-SNAPSHOT</ameba.memcached.version>
         <ameba.email.version>0.1.8-SNAPSHOT</ameba.email.version>
+        <ameba.mvc.httl.version>0.1.9-SNAPSHOT</ameba.mvc.httl.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
