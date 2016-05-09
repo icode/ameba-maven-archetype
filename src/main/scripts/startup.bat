@@ -11,4 +11,4 @@ SET PARENTDIR=%cd%
 
 set LIB_CP=%PARENTDIR%;%PARENTDIR%\lib\*;
 
-java %ACC% -cp "%LIB_CP%" ameba.Ameba %*
+java -Xbootclasspath/p:%PARENTDIR%\lib\grizzly-npn-bootstrap-1.2.jar %ACC% -cp "%LIB_CP%" ameba.Ameba %*

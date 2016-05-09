@@ -33,7 +33,8 @@ fi
 
 cd "$P_DIR"
 
-$JAVA -cp $CP \
+$JAVA -Xbootclasspath/p:$P_DIR/lib/grizzly-npn-bootstrap-1.2.jar \
+  -cp $CP \
   $VM_OPTIONS \
   ameba.Ameba \
   "$@" & echo $! > $TEMP_DIR/pid
