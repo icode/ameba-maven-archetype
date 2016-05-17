@@ -7,7 +7,7 @@ SET ACC=
 FOR /F "usebackq delims=" %%i IN ("%VM_OPTIONS_FILE%") DO CALL "%CURRENTDIR%\append.bat" "%%i"
 
 SET NPN=
-FOR /F "%CURRENTDIR\lib" %i IN ("grizzly-npn-api-?.?.jar") DO SET NPN=%i
+FOR /R "%CURRENTDIR\lib" %i IN ("grizzly-npn-api-?.?.jar") DO SET NPN=%i
 
 cd..
 SET PARENTDIR=%cd%
