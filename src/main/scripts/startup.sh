@@ -23,6 +23,8 @@ fi
 CAT=`which cat`
 GREP=`which egrep`
 TR=`which tr`
+FIND=`which find`
+HEAD=`which head`
 
 VM_OPTIONS=""
 vm_opts_file="$C_DIR/ameba.vmoptions"
@@ -33,7 +35,9 @@ fi
 
 cd "$P_DIR"
 
-$JAVA -Xbootclasspath/p:$P_DIR/lib/grizzly-npn-bootstrap-1.2.jar \
+NPN=`"$FIND" "$P_DIR/lib" -maxdepth 1 -type f -name "grizzly-npn-api-[0-9].[0-9].jar" | "$HEAD" -1`
+
+$JAVA -Xbootclasspath/p:$NPN \
   -cp $CP \
   $VM_OPTIONS \
   ameba.Ameba \
