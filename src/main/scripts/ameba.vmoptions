@@ -1,8 +1,8 @@
+-server
 -Xms128m
 -Xmx512m
 -XX:MaxPermSize=350m
 -XX:+UseConcMarkSweepGC
 -XX:+UseParNewGC
 -XX:+CMSParallelRemarkEnabled
--XX:+UseConcMarkSweepGC
 -XX:CMSInitiatingOccupancyFraction=75
