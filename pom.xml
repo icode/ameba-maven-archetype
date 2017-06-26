@@ -226,11 +226,11 @@
         <ameba.version>0.1.13-SNAPSHOT</ameba.version>
         <ameba.dev.version>0.1.13-SNAPSHOT</ameba.dev.version>
         <ameba.maven.version>0.1.13-SNAPSHOT</ameba.maven.version>
-        <ameba.container.version>0.1.12</ameba.container.version>
-        <ameba.shrio.version>0.1.10</ameba.shrio.version>
-        <ameba.session.version>0.1.9</ameba.session.version>
-        <ameba.ehcache.version>0.1.9</ameba.ehcache.version>
-        <ameba.memcached.version>0.1.9</ameba.memcached.version>
+        <ameba.container.version>0.1.13-SNAPSHOT</ameba.container.version>
+        <ameba.ehcache.version>0.1.13-SNAPSHOT</ameba.ehcache.version>
+        <ameba.memcached.version>0.1.13-SNAPSHOT</ameba.memcached.version>
+        <ameba.shrio.version>0.1.13-SNAPSHOT</ameba.shrio.version>
+        <ameba.session.version>0.1.13-SNAPSHOT</ameba.session.version>
         <ameba.email.version>0.1.9</ameba.email.version>
         <ameba.mvc.httl.version>0.1.9</ameba.mvc.httl.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
