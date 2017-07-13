@@ -231,8 +231,8 @@
         <ameba.memcached.version>0.1.13-SNAPSHOT</ameba.memcached.version>
         <ameba.shrio.version>0.1.13-SNAPSHOT</ameba.shrio.version>
         <ameba.session.version>0.1.13-SNAPSHOT</ameba.session.version>
-        <ameba.email.version>0.1.9</ameba.email.version>
-        <ameba.mvc.httl.version>0.1.9</ameba.mvc.httl.version>
+        <ameba.email.version>0.1.13-SNAPSHOT</ameba.email.version>
+        <ameba.mvc.httl.version>0.1.13-SNAPSHOT</ameba.mvc.httl.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 </project>
