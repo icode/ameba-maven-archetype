@@ -93,6 +93,16 @@
     </pluginRepositories>
 
     <build>
+        <filters>
+            <filter>${application.properties}</filter>
+            <filter>${application.mode.properties}</filter>
+        </filters>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -133,14 +143,14 @@
                 <resources>
                     <resource>
                         <directory>src/main/conf</directory>
-                        <targetPath>${build.outputDirectory}/conf</targetPath>
+                        <targetPath>${project.build.outputDirectory}/conf</targetPath>
                         <filtering>true</filtering>
                     </resource>
                 </resources>
 
                 <filters>
-                    <filter>src/main/filters/application.properties</filter>
-                    <filter>src/main/filters/application-${app.mode}.properties</filter>
+                    <filter>${application.properties}</filter>
+                    <filter>${application.mode.properties}</filter>
                 </filters>
             </build>
             <properties>
@@ -193,8 +203,8 @@
                         <version>2.2.1</version>
                         <configuration>
                             <filters>
-                                <filter>src/main/filters/application.properties</filter>
-                                <filter>src/main/filters/application-${app.mode}.properties</filter>
+                                <filter>${application.properties}</filter>
+                                <filter>${application.mode.properties}</filter>
                             </filters>
                             <descriptors>
                                 <descriptor>src/main/assembly/standalone.xml</descriptor>
@@ -223,6 +233,8 @@
     </profiles>
 
     <properties>
+        <application.properties>src/main/filters/application.properties</application.properties>
+        <application.mode.properties>src/main/filters/application-${app.mode}.properties</application.mode.properties>
         <ameba.version>0.1.13-SNAPSHOT</ameba.version>
         <ameba.dev.version>0.1.13-SNAPSHOT</ameba.dev.version>
         <ameba.maven.version>0.1.13-SNAPSHOT</ameba.maven.version>
