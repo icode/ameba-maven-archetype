@@ -18,7 +18,7 @@ else
   export JAVA="$JAVA_HOME/bin/java"
 fi
 
-./shutdown.sh
+./$C_DIR/shutdown.sh
 
 CAT=`which cat`
 GREP=`which egrep`
@@ -37,8 +37,9 @@ cd "$P_DIR"
 
 NPN=`"$FIND" "$P_DIR/lib" -maxdepth 1 -type f -name "grizzly-npn-api-[0-9].[0-9].jar" | "$HEAD" -1`
 
-$JAVA -Xbootclasspath/p:$NPN \
+nohup $JAVA -Xbootclasspath/p:$NPN \
   -cp $CP \
   $VM_OPTIONS \
   ameba.Ameba \
-  "$@" & echo $! > $TEMP_DIR/pid
+  "$@" >/dev/null 2>&1 & echo $! > $TEMP_DIR/pid &
+
