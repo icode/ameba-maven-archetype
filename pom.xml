@@ -148,11 +148,6 @@
                         <filtering>true</filtering>
                     </resource>
                 </resources>
-
-                <filters>
-                    <filter>${application.properties}</filter>
-                    <filter>${application.mode.properties}</filter>
-                </filters>
             </build>
             <properties>
                 <app.mode>dev</app.mode>
@@ -175,6 +170,13 @@
         <profile>
             <id>enhance</id>
             <build>
+                <resources>
+                    <resource>
+                        <directory>src/main/conf</directory>
+                        <targetPath>${project.build.directory}/ameba/conf</targetPath>
+                        <filtering>true</filtering>
+                    </resource>
+                </resources>
                 <plugins>
                     <plugin>
                         <groupId>org.amebastack.maven</groupId>
