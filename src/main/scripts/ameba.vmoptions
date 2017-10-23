@@ -2,6 +2,5 @@
 -Xms128m
 -Xmx512m
 -XX:+UseConcMarkSweepGC
--XX:+UseParNewGC
 -XX:+CMSParallelRemarkEnabled
 -XX:CMSInitiatingOccupancyFraction=75
