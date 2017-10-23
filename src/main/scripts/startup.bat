@@ -9,9 +9,9 @@ FOR /F "usebackq delims=" %%i IN ("%VM_OPTIONS_FILE%") DO CALL "%CURRENTDIR%\app
 cd..
 SET PARENTDIR=%cd%
 
-SET NPN=
-FOR /R "%PARENTDIR%\lib" %%i IN ("grizzly-npn-api-?.?.jar") DO SET NPN=%%i
+rem SET NPN=
+rem FOR /R "%PARENTDIR%\lib" %%i IN ("grizzly-npn-api-?.?.jar") DO SET NPN=%%i
 
 set LIB_CP=%PARENTDIR%;%PARENTDIR%\lib\*;
 
-java -Xbootclasspath/p:%NPN% %ACC% -cp "%LIB_CP%" ameba.Ameba %*
+java %ACC% -cp "%LIB_CP%" ameba.Ameba %*

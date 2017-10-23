@@ -35,9 +35,9 @@ fi
 
 cd "$P_DIR"
 
-NPN=`"$FIND" "$P_DIR/lib" -maxdepth 1 -type f -name "grizzly-npn-api-[0-9].[0-9].jar" | "$HEAD" -1`
+#NPN=`"$FIND" "$P_DIR/lib" -maxdepth 1 -type f -name "grizzly-npn-api-[0-9].[0-9].jar" | "$HEAD" -1`
 
-nohup $JAVA -Xbootclasspath/p:$NPN \
+nohup $JAVA \
   -cp $CP \
   $VM_OPTIONS \
   ameba.Ameba \
