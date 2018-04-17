@@ -15,3 +15,5 @@ rem FOR /R "%PARENTDIR%\lib" %%i IN ("grizzly-npn-api-?.?.jar") DO SET NPN=%%i
 set LIB_CP=%PARENTDIR%;%PARENTDIR%\lib\*;
 
 java %ACC% -cp "%LIB_CP%" ameba.Ameba %*
+
+cd %CURRENTDIR%
